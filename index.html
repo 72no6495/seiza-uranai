@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>裏・星占い | 天秤座の真実</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f0518;
+            --card-bg: rgba(20, 10, 35, 0.9);
+            --text-main: #c0b0d0;
+            --accent-gold: #d4af37;
+            --accent-red: #8a1c1c;
+            --border-glow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at 50% 50%, #1a0b2e 0%, #000000 100%);
+            color: var(--text-main);
+            font-family: 'Shippori Mincho', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        /* コンテナ */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* ヘッダー */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            border-bottom: 1px solid var(--accent-gold);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            color: var(--accent-gold);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--accent-red);
+            letter-spacing: 0.2em;
+        }
+
+        /* 画像エリア */
+        .image-wrapper {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -10px; left: -10px; right: -10px; bottom: -10px;
+            border: 1px solid var(--accent-gold);
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .featured-image {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid var(--accent-gold);
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+            filter: sepia(20%) contrast(110%);
+        }
+
+        /* コンテンツセクション */
+        section {
+            background: var(--card-bg);
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid #332244;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--accent-gold);
+            border-left: 4px solid var(--accent-red);
+            padding-left: 15px;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #e0e0e0;
+            border-bottom: 1px solid #443355;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        .highlight {
+            color: var(--accent-red);
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li::before {
+            content: '†';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+        }
+
+        /* テーブル */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: rgba(0,0,0,0.3);
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #443355;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2a153c;
+            color: var(--accent-gold);
+            font-family: 'Cinzel', serif;
+        }
+
+        /* 引用ブロック */
+        blockquote {
+            margin: 40px 0;
+            padding: 20px;
+            border-left: 5px solid var(--accent-gold);
+            background: linear-gradient(90deg, rgba(212,175,55,0.1), transparent);
+            font-style: italic;
+            position: relative;
+        }
+
+        blockquote::before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            opacity: 0.2;
+            color: var(--accent-gold);
+            font-family: 'Cinzel', serif;
+        }
+
+        /* フッター */
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #665577;
+            padding-top: 40px;
+            border-top: 1px solid #332244;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 30px;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-family: 'Cinzel', serif;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-gold);
+            color: #000;
+            box-shadow: 0 0 15px var(--accent-gold);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="subtitle">THE DARK HOROSCOPE</div>
+        <h1>⚖️ 天秤座：美しき「空っぽ」の均衡</h1>
+        <p>12星座の中で唯一「無機物」をシンボルとする星座の悲劇</p>
+    </header>
+
+    <div class="image-wrapper">
+        <img src="libra_card.png" alt="Libra: The Empty Balance" class="featured-image">
+    </div>
+
+    <section>
+        <p>占星術の世界では、すべての星座に光と影がありますが、ここではあえて<span class="highlight">「天秤座の苦悩と不器用さ」</span>にスポットを当てます。人間でも動物でもないその性質は、時に血の通わない冷酷さや、中身のなさを露呈してしまうのです。</p>
+
+        <h3>1. 「優柔不断」という名の地獄</h3>
+        <p>天秤座の最大の特徴は、決断力の欠如です。右の皿と左の皿を永遠に比べ続け、結局どちらも選べないままチャンスを逃します。</p>
+        <ul>
+            <li><strong>愚かなポイント：</strong> 嫌われるのを恐れるあまり、誰にでも良い顔をします。結果として「八方美人」のレッテルを貼られ、誰からも深く信頼されないという皮肉な結末を招きがちです。</li>
+        </ul>
+
+        <h3>2. 「見栄」に支配された美学</h3>
+        <p>天秤座にとって、中身よりも「見栄え」が重要です。財布の中身が空っぽでも、一流ブランドの服を身にまとい、優雅な生活を演じようとします。</p>
+        <ul>
+            <li><strong>劣っている点：</strong> 泥臭い努力を「格好悪い」と切り捨て、スマートにこなそうとします。しかし、現実はそう甘くありません。地道な積み重ねができないため、いざという時の底力に欠けるのです。</li>
+        </ul>
+
+        <h3>3. 「不運」を呼び込む依存体質</h3>
+        <p>一人では何もできないのが天秤座の弱点です。常に誰かとペアでいたいという欲求が強く、悪い相手でも「一人よりはマシ」と依存してしまいます。</p>
+        <ul>
+            <li><strong>運の悪さ：</strong> 自分の軸がないため、周囲の負のエネルギーをそのまま吸収してしまいます。他人のトラブルに巻き込まれやすく、自らの優柔不断さが招いた「人間関係の泥沼」で溺れることが多いのです。</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>🛠️ 天秤座の「詰み」パターン</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>項目</th>
+                    <th>特徴</th>
+                    <th>結果</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>対人関係</strong></td>
+                    <td>表面的な平和を優先</td>
+                    <td>本音を言えずストレスで自滅</td>
+                </tr>
+                <tr>
+                    <td><strong>仕事</strong></td>
+                    <td>責任ある決断を回避</td>
+                    <td>「使えない調整役」として孤立</td>
+                </tr>
+                <tr>
+                    <td><strong>金運</strong></td>
+                    <td>社交費と見栄への浪費</td>
+                    <td>常に自転車操業</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <blockquote>
+        <strong>【一言】</strong><br>
+        天秤座のあなたは、バランスを取っているつもりで、実は「何者でもない自分」を維持しているだけかもしれません。優雅な仮面の下にある怠惰な本性と向き合わない限り、運命の天秤が幸福に傾くことは一生ないでしょう。
+    </blockquote>
+
+    <footer>
+        <p>© 2024 Dark Zodiac. All misfortunes reserved.</p>
+        <a href="#" class="btn">他の星座の不幸を見る</a>
+    </footer>
+</div>
+
+</body>
+</html>
